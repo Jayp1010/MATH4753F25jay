@@ -16,3 +16,4 @@ Encoding: UTF-8
 LazyData: true
 URL: https://github.com/Jayp1010/MATH4753F25jay
 BugReports: https://github.com/Jayp1010/MATH4753F25jay/issues
+RoxygenNote: 7.3.2
