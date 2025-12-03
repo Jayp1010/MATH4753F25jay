@@ -1,0 +1,29 @@
+```{r task7-quick, eval=FALSE}
+install.packages("usethis")   
+install.packages("devtools")    
+
+library(usethis)
+library(devtools)
+
+# 1) Read the CSV (adjust path if your file is elsewhere)
+fire <- read.csv("FIREDAM.csv", stringsAsFactors = FALSE)
+
+# 2) Save to data/ as an .rda with the object name "fire"
+use_data(fire, overwrite = TRUE)   # creates data/fire.rda
+
+# 3) Create a minimal data documentation file
+usethis::use_r("fire")  # opens R/fire.R in your editor
+# Paste the Roxygen block from the next chunk into R/fire.R, then save.
+
+# 4) Build documentation and install package
+devtools::document()
+devtools::build()
+devtools::install()
+
+# 5) Test
+library(MATH4753F25jay) 
+data("fire")
+head(fire)
+
+usethis::use_r("ntickets")
+```
